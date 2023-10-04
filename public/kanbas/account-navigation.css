@@ -1,0 +1,67 @@
+
+body {
+    height:100%;
+}
+
+
+.wd-account-nav {
+    min-width: 120px;
+    max-width: 200px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.wd-account-nav ul {
+    --bs-list-group-color: #ffffff;
+    --bs-list-group-bg: #ffffff;
+    --bs-list-group-item-padding-x: 8px;
+    --bs-list-group-item-padding-y: 8px;
+    --bs-list-group-action-hover-color: #495057;
+    --bs-list-group-action-hover-bg: #f8f9fa;
+    --bs-list-group-action-active-color: #212529;
+    --bs-list-group-action-active-bg: #e9ecef;
+    --bs-list-group-disabled-color: #6c757d;
+    --bs-list-group-disabled-bg: #fff;
+    --bs-list-group-active-color: #fff;
+    --bs-list-group-active-bg: #0d6efd;
+    --bs-list-group-active-border-color: #0d6efd;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100%;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    text-align: left;
+    font-weight: 400;
+}
+
+.wd-account-nav li{
+    position: relative;
+    display: block;
+    padding: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);
+    color: var(--bs-list-group-color);
+    text-decoration: none;
+    background-color: var(--bs-list-group-bg);
+    border: none;
+    border-left: 20px;
+    padding: none;
+    margin-bottom: 16px;
+}
+
+.wd-account-nav a {
+    color: rgb(198, 13, 13);
+    text-decoration: none;
+    font-size: 16px;
+    padding: none;
+}
+
+.wd-account-nav .selected {
+    border-left: 3px solid black;
+}
+
+.wd-account-nav .selected a {
+    margin-left: 21px;
+    color: black;
+}
+

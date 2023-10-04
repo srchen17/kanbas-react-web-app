@@ -1,0 +1,80 @@
+.wd-assignment-edit {
+  margin-left: 40px;
+  max-width: 900px;
+}
+
+.wd-assignment-edit h6 {
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+.wd-icon-size {
+  padding-right: 0px;
+  margin-right: 0px;
+  max-width: 10px;
+}
+
+.wd-no-left {
+  margin-left: 0px;
+  margin-right: 0px; 
+}
+
+.wd-assignment-edit .dropdown .btn-secondary {
+  background-color: transparent;
+  border: rgb(200, 200, 200) solid 1px; 
+  border-radius: 5px;
+}
+
+.wd-submission-box {
+  background-color: transparent;
+  border: rgb(200, 200, 200) solid 1px; 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.wd-assignment-edit .list-group-item {
+  border: none;
+  font-weight: 400;
+}
+
+.wd-assignment-edit .wd-submission-footer {
+  background-color: rgb(238, 238, 238);
+  border: rgb(225, 225, 225) solid 1px; 
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+}
+
+.wd-assignment-edit .wd-submission-footer .btn-secondary {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  width: 100%;
+}
+
+.wd-assignment-edit .btn {
+  font-size: 15px;
+  border-radius: 3px;
+  border: rgb(225, 225, 225) solid 1px; 
+  margin-left: 3px;
+}
+.wd-assignment-edit .btn-secondary {
+  background-color: rgb(238, 238, 238);
+}
+
+.wd-form-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.wd-assignment-edit .wd-button-bar {
+  padding-bottom: 30px;
+}

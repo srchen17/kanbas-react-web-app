@@ -1,0 +1,102 @@
+
+
+.page-header a {
+  color: rgb(198, 13, 13);
+  text-decoration: none;
+}
+
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .wd-assignments {
+    width:auto;
+  }
+
+    
+  .wd-assignments h3 {
+   font-size: 15px;
+  }
+
+
+  .wd-assignments .list-group {
+    border-radius: 0;
+  }
+
+  .wd-assignments .btn {
+    background-color: transparent;
+    border: none;
+  }
+
+
+  .wd-assignments .fa-pen-to-square {
+    color: green;
+  }
+ 
+
+  .wd-assignments .list-group-item {
+    border-radius: 0;
+    border-left: green 5px solid;
+    padding: 15px;
+  }
+
+
+  .wd-assignments .fa-grip-vertical {
+    color: grey;
+  }
+
+
+  .wd-assignments .list-group-item-secondary {
+    border: 0.5px solid rgb(200, 200, 200);
+    padding: 10px;
+  }   
+
+  .wd-checkmark {
+    color: green;
+}
+
+.percentage {
+    border:solid darkgrey 1px;
+    padding: 5px;
+}
+
+.wd-kanbas-nav-bg {
+    background-color: black;
+    width: 84px; 
+    min-height: 710px;
+    height: 100%;
+}
+
+.page-header {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 60px;
+}
+
+
+.wd-home {
+  margin-left: 50px;
+  margin-right: 60px;
+}
+
+.wd-assignments h5 {
+  color: rgb(47, 47, 47);
+  margin: 0px;
+  line-height: 20px;
+  font-size: 18px;
+}
+
+.wd-assignments p {
+  font-size: 13px;
+  line-height: 19px;
+  margin: 0px;
+  color: grey;
+  font-weight: 400;
+}
+
+.wd-vertical-center {
+  margin-top: 30%;
+  margin-bottom: 30%;
+}

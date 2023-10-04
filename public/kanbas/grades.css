@@ -1,0 +1,16 @@
+.wd-grades .btn-secondary {
+    background-color: transparent;
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 3px;
+}
+
+.wd-grades .btn-light {
+    background-color: rgb(238, 238, 238);
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 3px;
+}
+
+.wd-grades .table {
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 3px;
+}

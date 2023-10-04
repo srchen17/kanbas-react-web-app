@@ -1,0 +1,63 @@
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+.wd-profile-view {
+    font-family: sans-serif; 
+    margin-left: 20px;
+}
+
+.wd-profile-view h1 {
+    font-family: sans-serif; 
+    font-weight: 500;
+}
+
+.wd-profile-view h3 {
+    font-family: sans-serif; 
+    font-weight: 500;
+}
+
+.wd-profile-view p {
+    font-family: sans-serif; 
+}
+
+.wd-profile-view a {
+    --neu-red: rgb(198, 13, 13);
+    font-family: sans-serif; 
+    color: var(--neu-red);
+}
+
+.wd-profile-view button {
+    font-family: sans-serif; 
+    border-radius: 0;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.wd-float-left {
+    float: left;
+ }
+ 
+ .wd-float-right {
+    float: right;
+ }
+
+ .page-header {
+    margin-left: 20px;
+    margin-top: 20px;
+ }
+ 
+ .icon {
+    padding-right: 10px;
+    color:rgb(198, 13, 13);
+ }
+
+ .wd-mr-30px {
+    margin-right: 50px;
+ }
+
+ .wd-kanbas-nav-bg {
+    height: 20%;
+}
