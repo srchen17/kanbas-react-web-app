@@ -1,0 +1,49 @@
+
+
+
+.wd-icon {
+    color:rgb(198, 13, 13);
+}
+
+.wd-courses a {
+    color:rgb(198, 13, 13);
+    text-decoration: none;
+}
+
+.breadcrumb {
+    --bs-breadcrumb-divider: '>';
+}
+
+.wd-courses nav .btn {
+    border-radius: 4px;
+    border: 0.5px solid rgb(200, 200, 200);
+    text-align: left;
+    font-size: 15px;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+
+.wd-courses nav .btn-secondary {
+    background-color: rgb(241, 241, 241);
+    color: rgb(38, 38, 38);
+}
+
+.wd-simple-header {
+    margin: none;
+    color: white;
+}
+
+
+.wd-simple-header a {
+    color: white;
+    text-decoration: underline;
+}
+
+.wd-margin-right {
+    margin-right: 10px;
+}
+
+.wd-breadcrumb {
+    margin-top: 20px;
+}
