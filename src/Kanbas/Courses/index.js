@@ -68,10 +68,13 @@ function Courses() {
             </a>
             </div>
             <div class="d-flex p-3">
-              <a href="#">{course.number} {course.name}
+            <Link to={`/Kanbas/Courses/${courseId}/Home`}>
+            <a href="">{course.number} {course.name}
                 <br />
                 Modules
               </a>
+            </Link>
+              
             </div>
             <div className="d-flex justify-content-between p-4">
               <div className="wd-margin-right">
