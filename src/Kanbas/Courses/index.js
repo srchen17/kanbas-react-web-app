@@ -50,7 +50,7 @@ function Courses() {
           </li>
           <div className="flex-grow-1">
           </div>
-          <span className="wd-icon">
+          <span className="wd-icon wd-margin-tl">
             <button className="btn btn-secondary">
               <FaGlasses className="p-1" size={25} /> Student View
             </button>
@@ -98,10 +98,12 @@ function Courses() {
             </a>
             </div>
             <div class="d-flex p-3">
-              <a href="#">{course.number} {course.name}
-                <br />
-                Modules
-              </a>
+              <Link to={`/Kanbas/Courses/${courseId}/Home`}>
+              <a href="">{course.number} {course.name}
+                  <br />
+                  Modules
+                </a>
+              </Link>
             </div>
             <div className="d-flex justify-content-between p-4">
               <div className="wd-margin-right">
