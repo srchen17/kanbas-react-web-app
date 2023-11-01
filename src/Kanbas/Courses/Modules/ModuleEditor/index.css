@@ -1,0 +1,110 @@
+.wd-module-edit {
+    margin-left: 80px;
+    max-width: 900px;
+    flex-grow: 1;
+  }
+
+  .wd-module-edit label {
+    margin-bottom: 8px;
+    color: rgb(46, 46, 46);
+
+  }
+  
+  .wd-module-edit h6 {
+      margin-left: 0px;
+      padding-left: 0px;
+      margin-right: 10px;
+      font-weight: 700;
+  }
+  
+  .wd-icon-size {
+    padding-right: 0px;
+    margin-right: 0px;
+    max-width: 10px;
+  }
+  
+  .wd-no-left {
+    margin-left: 0px;
+    margin-right: 0px; 
+  }
+  
+  .wd-module-edit .dropdown .btn-secondary {
+    background-color: transparent;
+    border: rgb(200, 200, 200) solid 1px; 
+    border-radius: 5px;
+  }
+  
+  .wd-submission-box {
+    background-color: transparent;
+    border: rgb(200, 200, 200) solid 1px; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+  
+  .wd-module-edit .list-group-item {
+    border: none;
+    font-weight: 400;
+  }
+  
+  .wd-module-edit .wd-submission-footer {
+    background-color: rgb(238, 238, 238);
+    border: rgb(225, 225, 225) solid 1px; 
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+  }
+  
+  .wd-module-edit .wd-submission-footer .btn-secondary {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    width: 100%;
+  }
+  
+  .wd-module-edit .btn {
+    font-size: 15px;
+    border-radius: 3px;
+    border: rgb(183, 183, 183) solid 1px; 
+    margin-left: 3px;
+    margin-top: 10px;
+  }
+
+  .wd-module-edit .btn-secondary {
+    background-color: rgb(238, 238, 238);
+    color: black;
+  }
+
+  .wd-form-margin {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .wd-module-edit .wd-button-bar {
+    padding-bottom: 30px;
+  }
+
+  .wd-module-edit .green-icon {
+    color: green;
+  }
+
+  .wd-module-edit .text-light {
+    text-decoration: none;
+  }
+
+  .wd-module-edit input {
+    border-radius: 8px;
+    border: 1px solid lightgrey;
+    padding: 5px;
+  }
+
+  .wd-module-edit textarea {
+    border-radius: 8px;
+    border: 1px solid lightgrey;
+    padding: 5px;
+  }

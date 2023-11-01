@@ -14,14 +14,16 @@ import MiniKanbasNav from "./Home/MiniKanbasNav";
 import { Link } from "react-router-dom";
 import {AiOutlineClose} from 'react-icons/ai';
 import MiniCourseNav from "./Home/MiniCourseNav";
+import ModuleEditor from "./Modules/ModuleEditor/ModuleEditor";
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './courses.css';
 
 
-function Courses() {
+function Courses({  courses  }) {
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   const { pathname } = useLocation();
 
   return (
@@ -57,10 +59,12 @@ function Courses() {
           </span>
         </ol>
       </nav>
+      
       <Routes>
         <Route path="Home" element={
           <div className="wd-simple-header d-flex justify-content-between d-xs-block d-sm-none">
             <div className="d-flex justify-content-between p-4">
+           
             <a href="white-kanbas-navigation.html">
               <Link to={`/Kanbas/Courses/${courseId}/Home/MiniKanbasNav`}>
                 <FaBars size={28}/>
@@ -76,6 +80,7 @@ function Courses() {
             </Link>
               
             </div>
+        
             <div className="d-flex justify-content-between p-4">
               <div className="wd-margin-right">
               <FaGlasses/>
@@ -118,9 +123,11 @@ function Courses() {
           </div>
         } />
       </Routes>
+      
       <div className={`${pathname.includes("Home") && "d-none d-sm-block"}`}>
         <hr />
       </div>
+     
 
       <div className="d-flex flex-row">
         <CourseNavigation />
@@ -132,13 +139,15 @@ function Courses() {
               top: "50px",
             }}
           >
+           
             <Routes>
               <Route path="/" element={<Navigate to="Home" />} />
-              <Route path="Home" element={<Home />} />
+              <Route path="Home" element={<Home courses={courses}/>} />
               <Route path="Home/MiniKanbasNav" element={<MiniKanbasNav/>} />
               <Route path="Home/MiniCourseNav" element={<MiniCourseNav/>} />
-              <Route path="Modules" element={<Modules />} />
+              <Route path="Modules" element={<Modules courses={courses}/>} />
               <Route path="Assignments" element={<Assignments />} />
+              <Route path="Modules/ModuleEditor" element={<ModuleEditor/>} />
               <Route
                 path="Assignments/:assignmentId"
                 element={<AssignmentEditor />}
@@ -149,6 +158,7 @@ function Courses() {
         </div>
       </div>
     </div>
+    
   );
 }
 export default Courses;

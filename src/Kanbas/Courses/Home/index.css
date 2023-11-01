@@ -20,7 +20,7 @@
 /* HOME DIV STYLING */ 
 
 .wd-home .btn {
-    border-radius: 0;
+    padding: none;
 }
 
 .wd-home a {

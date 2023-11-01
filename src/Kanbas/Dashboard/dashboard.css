@@ -56,8 +56,50 @@
     background-color: transparent;
     border: none;
     margin: none;
-    
 }
 
+.wd-dashboard  .btn-light {
+    background-color: transparent;
+    border: none;
+    margin: none;
+    font-size: 12px;
+    color: rgb(95, 95, 95);
+    margin: none;
+    --bs-btn-padding-x: none;
+    --bs-btn-padding-y: none;
+    padding-right: 10px;
+}
+
+
+.wd-dashboard  .btn-primary {
+    background-color: rgb(243, 243, 243);
+    border: 1px lightgrey solid;
+    padding: 10px;
+    margin: none;
+    font-size: 14px;
+    color: black;
+    margin: none;
+    --bs-btn-padding-x: none;
+    --bs-btn-padding-y: none;  
+}
+
+.wd-dashboard  .btn-danger {
+    background-color: #dc3545;
+    border: 1px solid rgb(220, 220, 220);
+    margin: none;
+    font-size: 17px;
+    color: white;
+    margin: none;
+    --bs-btn-padding-x: 10px;
+    --bs-btn-padding-y: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    margin-left: 30px;
+    box-shadow: 1px 1px 10px rgb(181, 181, 181);
+}
+
+.wd-dashboard .btn-secondary link {
+    color: white;
+}
 
 
