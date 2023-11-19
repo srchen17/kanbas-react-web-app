@@ -17,7 +17,7 @@ function DashboardEditor
                 <input value={course.name} className="form-control"
                     onChange={(e) => setCourse({ ...course, name: e.target.value })} />
                 <br />
-                <label>Course Editor</label>
+                <label>Course Number</label>
                 <input value={course.number} className="form-control"
                     onChange={(e) => setCourse({ ...course, number: e.target.value })} />
                 <br />
@@ -39,7 +39,9 @@ function DashboardEditor
                     </div>
                     <div className="float-end">
                         <Link className="text-light" to={`/Kanbas/Dashboard`}>
-                            <button className="btn btn-danger" onClick={updateCourse} >
+                            <button className="btn btn-danger" onClick={
+                                    updateCourse}
+                                 >
                                 Update
                             </button>
                         </Link>

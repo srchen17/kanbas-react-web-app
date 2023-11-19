@@ -11,11 +11,14 @@ import {BiSolidBarChartAlt2} from 'react-icons/bi';
 import {PiNumberCircleFiveFill} from 'react-icons/pi';
 import {AiOutlineClose} from 'react-icons/ai';
 
-function Home ({courses}) {
+function Home () {
+
+  const URL = "http://localhost:4000/api/courses"
+
     return (
     <div className="p-2 d-flex flex-row flex-grow-1">
         <div className="d-flex col d-flex flex-grow-1">
-            <ModuleList courses={courses} />
+            <ModuleList />
         </div>
         <div className="wd-home-sidebar d-none d-lg-block">
                     <ul className="list-group">

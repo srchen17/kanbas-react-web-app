@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import {BsThreeDotsVertical} from 'react-icons/bs';
@@ -11,24 +11,60 @@ addModule,
 deleteModule,
 updateModule,
 setModule,
+setModules
 } from "./modulesReducer";
 import {Link} from "react-router-dom";
-
+import * as client from "./client";
+import axios from "axios";
 
 import './index.css';
 
 function ModuleList({ courses }) {
   const { courseId } = useParams();
-  const modules = useSelector((state) => state.modulesReducer.modules);
-  const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
 
-  const course = courses.find((course) => course._id === courseId);
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  
 
+  // const URL = "https://kanbas-node-server-app-t0u9.onrender.com/api/courses";
+  // const URL = "http://localhost:4000/api/courses";
+  const URL = `${API_BASE}/courses`;
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+
+  useEffect(() => {
+    client.findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+    findCourseById(courseId);
+  }, [courseId]);
+
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
 
   return (
     
     <div className="wd-home">
+      {console.log(process.env)}
+
       <h3>{course.name}</h3>
       <hr/>
       <div className="d-flex flex-column">
@@ -83,7 +119,7 @@ function ModuleList({ courses }) {
                       </button>
                       </Link>
                       <button class="btn btn-primary text-dark"
-                        onClick={() => dispatch(deleteModule(module._id))}>    
+                        onClick={() => handleDeleteModule(module._id)}>    
                        Delete
                       </button>
                   </li>

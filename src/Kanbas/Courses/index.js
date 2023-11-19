@@ -15,16 +15,33 @@ import { Link } from "react-router-dom";
 import {AiOutlineClose} from 'react-icons/ai';
 import MiniCourseNav from "./Home/MiniCourseNav";
 import ModuleEditor from "./Modules/ModuleEditor/ModuleEditor";
-
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './courses.css';
 
 
-function Courses({  courses  }) {
+function Courses( ) {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  // const course = courses.find((course) => course._id === courseId);
   const { pathname } = useLocation();
+
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  // const URL = "http://localhost:4000/api/courses";
+
+  const URL = `${API_BASE}/courses`;
+
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
 
   return (
     <div className="wd-courses">
@@ -142,10 +159,10 @@ function Courses({  courses  }) {
            
             <Routes>
               <Route path="/" element={<Navigate to="Home" />} />
-              <Route path="Home" element={<Home courses={courses}/>} />
+              <Route path="Home" element={<Home />} />
               <Route path="Home/MiniKanbasNav" element={<MiniKanbasNav/>} />
               <Route path="Home/MiniCourseNav" element={<MiniCourseNav/>} />
-              <Route path="Modules" element={<Modules courses={courses}/>} />
+              <Route path="Modules" element={<Modules/>} />
               <Route path="Assignments" element={<Assignments />} />
               <Route path="Modules/ModuleEditor" element={<ModuleEditor/>} />
               <Route
