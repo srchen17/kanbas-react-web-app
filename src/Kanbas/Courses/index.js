@@ -29,8 +29,6 @@ function Courses( ) {
 
 
   // const API_BASE = process.env.REACT_APP_API_BASE;
-  const API_BASE = "https://kanbas-node-server-app-t0u9.onrender.com/api"
-
   // const API_BASE = "https://kanbas-node-server-app-t0u9.onrender.com/"
   // const URL = "http://localhost:4000/api/courses";
 

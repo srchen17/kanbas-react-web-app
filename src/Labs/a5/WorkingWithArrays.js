@@ -63,7 +63,7 @@ function WorkingWithArrays() {
     }, []);
 
 
-    const API = "http://localhost:4000/a5/todos";
+    const API = "https://kanbas-node-server-app-t0u9.onrender.com/a5/todos";
     return (
         <div>
             <h3>Working with Arrays</h3>
@@ -180,7 +180,7 @@ function WorkingWithArrays() {
                 Get Todo by ID
             </a>
             <h3>Filtering Array Items</h3>
-            <a href={`${API}/${todo.id}?completed=true`}
+            <a href={`${API}?completed=true`}
                 className="btn btn-primary me-2" >
                 Get Completed Todos
             </a>
