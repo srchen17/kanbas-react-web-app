@@ -24,6 +24,7 @@ function Account() {
   return (
     <div className="w-50 p-5">
       <h1>Account</h1>
+      <h2>Information</h2>
       {account && (
         <div className="">
           <input className="m-2 form-control" value={account.password}
