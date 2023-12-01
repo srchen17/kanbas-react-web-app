@@ -1,12 +1,13 @@
 import axios from "axios";
 
-const API_BASE = process.env.REACT_APP_API_BASE;
+// const API_BASE = process.env.REACT_APP_API_BASE;
+const API_BASE = "https://kanbas-node-server-app-a6-75ig.onrender.com";
 
-// const MODULES_URL = `${API_BASE}/modules`;
-// const COURSES_URL =   `${API_BASE}/courses`;
+const MODULES_URL = `${API_BASE}/api/modules`;
+const COURSES_URL =   `${API_BASE}/api/courses`;
 
-const COURSES_URL = "https://kanbas-node-server-app-t0u9.onrender.com/api/courses"
-const MODULES_URL = "https://kanbas-node-server-app-t0u9.onrender.com/api/modules"
+// const COURSES_URL = "https://kanbas-node-server-app-t0u9.onrender.com/api/courses"
+// const MODULES_URL = "https://kanbas-node-server-app-t0u9.onrender.com/api/modules"
 
 // const URL = `${API_BASE}/courses`;
 

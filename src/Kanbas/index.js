@@ -11,14 +11,25 @@ import store from "./store";
 import {Provider} from "react-redux";
 import DashboardEditor from "./Dashboard/DashboardEditor/dashboard-edit";
 import axios from "axios";
+import Signin from "../users/signin";
+import Account from "../users/account.js"
+import UserTable from "../users/table.js";
+import Signup from "../users/signup.js";
+
+// dotenv
+
+
+
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
   const API_BASE = process.env.REACT_APP_API_BASE;
   // const URL = `${API_BASE}/courses`;
-  const URL = "https://kanbas-node-server-app-t0u9.onrender.com/api/courses"
+  //const URL = "https://kanbas-node-server-app-t0u9.onrender.com/api/courses"
+  console.log(process.env.REACT_APP_API_BASE);
 
-  // const URL = "http://localhost:4000/api/courses";
+  // const URL = "http://localhost:4000.com/api/courses"
+  const URL = "https://kanbas-node-server-app-a6-75ig.onrender.com/api/courses";
   const findAllCourses = async () => {
   const response = await axios.get(URL);
   setCourses(response.data);
@@ -109,7 +120,7 @@ function Kanbas() {
         <div className="wd-div">
             <Routes>
                 <Route path="/" element={<Navigate to="Dashboard" />} />
-                <Route path="Account" element={<h1>Account</h1>} />
+                {/* <Route path="Account" element={<h1>Account</h1>} /> */}
                   <Route
                   path="Dashboard/DashboardEditor"
                   element={<DashboardEditor 
@@ -132,6 +143,10 @@ function Kanbas() {
                 <Route path="Courses/:courseId/*" element={<Courses 
                   courses={courses}/>} />
                 <Route path="Courses" element={<Navigate to="RS102"/>} />
+                <Route path="/signin" element={<Signin />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/account" element={<Account />} />
+                <Route path="/admin/users" element={<UserTable />} />
             </Routes>
         </div>
       </div>

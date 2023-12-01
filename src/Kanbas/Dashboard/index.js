@@ -20,6 +20,12 @@ function Dashboard(
                 <h1 className="wd-light-font">Dashboard</h1>
                 <hr />
                 <div className="wd-dashboard">
+                    <a href="http://localhost:3000/#/Kanbas/signin">
+                        <h2>Sign In</h2>
+                    </a>
+                    <a href="http://localhost:3000/#/Kanbas/signup">
+                        <h2>Sign Up</h2>
+                    </a>
                     <h3>Published Courses (24)</h3>
                     <hr />
                     <Link className="text-light" to={`/Kanbas/Dashboard/DashboardEditor`}>

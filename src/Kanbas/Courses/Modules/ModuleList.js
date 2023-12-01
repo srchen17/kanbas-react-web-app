@@ -27,9 +27,9 @@ function ModuleList({ courses }) {
   
 
   // const URL = "https://kanbas-node-server-app-t0u9.onrender.com/api/courses";
-  // const URL = "http://localhost:4000/api/courses";
+  const URL = "https://kanbas-node-server-app-a6-75ig.onrender.com/api/courses";
 
-  const URL = "https://kanbas-node-server-app-t0u9.onrender.com/api/courses"
+  // const URL = "https://kanbas-node-server-app-t0u9.onrender.com/api/courses"
   // const URL = `${API_BASE}/courses`;
   const [course, setCourse] = useState({});
   const findCourseById = async (courseId) => {
