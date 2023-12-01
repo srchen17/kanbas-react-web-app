@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as client from "./client";
 import { BsPencil, BsFillCheckCircleFill, BsTrash3Fill, BsPlusCircleFill } from "react-icons/bs";
-
+import { Link } from "react-router-dom";
 
 function UserTable() {
   const [users, setUsers] = useState([]);
@@ -41,7 +41,7 @@ function UserTable() {
 
 
 
-  
+
   const fetchUsers = async () => {
     const users = await client.findAllUsers();
     setUsers(users);
@@ -59,14 +59,14 @@ function UserTable() {
           </tr>
           <tr>
             <td>
-            <input class="form-control" placeholder="Username" value={user.username} onChange={(e) => setUser({ ...user, username: e.target.value })}/>
-              <input class="form-control" placeholder="Password" value={user.password} onChange={(e) => setUser({ ...user, password: e.target.value })}/>
+              <input class="form-control" placeholder="Username" value={user.username} onChange={(e) => setUser({ ...user, username: e.target.value })} />
+              <input class="form-control" placeholder="Password" value={user.password} onChange={(e) => setUser({ ...user, password: e.target.value })} />
             </td>
             <td>
-              <input class="form-control" value={user.firstName} onChange={(e) => setUser({ ...user, firstName: e.target.value })}/>
+              <input class="form-control" value={user.firstName} onChange={(e) => setUser({ ...user, firstName: e.target.value })} />
             </td>
             <td>
-              <input class="form-control" value={user.lastName} onChange={(e) => setUser({ ...user, lastName: e.target.value })}/>
+              <input class="form-control" value={user.lastName} onChange={(e) => setUser({ ...user, lastName: e.target.value })} />
             </td>
             <td>
               <select class="form-control" value={user.role} onChange={(e) => setUser({ ...user, role: e.target.value })}>
@@ -80,26 +80,30 @@ function UserTable() {
               <BsFillCheckCircleFill onClick={updateUser}
                 className="m-2 me-2 text-success fs-1 text" />
               <BsPlusCircleFill onClick={createUser}
-              className=" m-2 me-2 text-dark fs-1 text"/>
+                className=" m-2 me-2 text-dark fs-1 text" />
             </td>
           </tr>
         </thead>
         <tbody>
           {users.map((user) => (
             <tr key={user._id}>
-              <td>{user.username}</td>
+              <td>
+                <Link to={`/Kanbas/account/${user._id}`}>
+                  {user.username}
+                </Link>
+              </td>
               <td>{user.firstName}</td>
               <td>{user.lastName}</td>
               <td className="text-nowrap">
-        <button className="btn btn-danger me-2">
-        <BsTrash3Fill onClick={() => deleteUser(user)} />
-        </button>
-        <button className="btn btn-warning me-2">
-        <BsPencil onClick={() => selectUser(user)} />
-        </button>
-    </td>
+                <button className="btn btn-danger me-2">
+                  <BsTrash3Fill onClick={() => deleteUser(user)} />
+                </button>
+                <button className="btn btn-warning me-2">
+                  <BsPencil onClick={() => selectUser(user)} />
+                </button>
+              </td>
 
-              
+
             </tr>))}
         </tbody>
       </table>

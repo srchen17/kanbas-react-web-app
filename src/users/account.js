@@ -1,7 +1,16 @@
 import * as client from "./client";
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
+
 function Account() {
+  const { id } = useParams();
+  const findUserById = async (id) => {
+    const user = await client.findUserById(id);
+    setAccount(user);
+  };
+
   const [account, setAccount] = useState(null);
   const navigate = useNavigate();
   const fetchAccount = async () => {
@@ -18,8 +27,13 @@ function Account() {
 
 
   useEffect(() => {
-    fetchAccount();
+    if (id) {
+      findUserById(id);
+    } else {
+      fetchAccount();
+    }
   }, []);
+
 
   return (
     <div className="w-50 p-5">

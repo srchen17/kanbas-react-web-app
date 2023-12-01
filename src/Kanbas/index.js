@@ -15,6 +15,7 @@ import Signin from "../users/signin";
 import Account from "../users/account.js"
 import UserTable from "../users/table.js";
 import Signup from "../users/signup.js";
+ <Route path="/account/:id" element={<Account />} />
 
 // dotenv
 
@@ -146,6 +147,7 @@ function Kanbas() {
                 <Route path="/signin" element={<Signin />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/account" element={<Account />} />
+                <Route path="/account/:id" element={<Account />} />
                 <Route path="/admin/users" element={<UserTable />} />
             </Routes>
         </div>
