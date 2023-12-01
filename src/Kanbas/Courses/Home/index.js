@@ -13,7 +13,7 @@ import {AiOutlineClose} from 'react-icons/ai';
 
 function Home () {
 
-  const URL = "http://localhost:4000/api/courses"
+  const URL = "https://kanbas-node-server-app-a6-75ig.onrender.com/api/courses"
 
     return (
     <div className="p-2 d-flex flex-row flex-grow-1">

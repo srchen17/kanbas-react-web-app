@@ -20,10 +20,10 @@ function Dashboard(
                 <h1 className="wd-light-font">Dashboard</h1>
                 <hr />
                 <div className="wd-dashboard">
-                    <a href="http://localhost:3000/#/Kanbas/signin">
+                    <a href="https://a6--stunning-mooncake-3bbe0a.netlify.app/#/Kanbas/signin">
                         <h2>Sign In</h2>
                     </a>
-                    <a href="http://localhost:3000/#/Kanbas/signup">
+                    <a href="https://a6--stunning-mooncake-3bbe0a.netlify.app/#/Kanbas/signup">
                         <h2>Sign Up</h2>
                     </a>
                     <h3>Published Courses (24)</h3>
